@@ -21,6 +21,7 @@ jobs:
         run: npm install
 
       - name: Khởi động lại Server
+        shell: cmd
         # Nếu lỡ Server chưa chạy thì chạy mới, nếu chạy rồi thì reload
         run: |
           pm2 reload osstech-wiki || pm2 start ecosystem.config.js
