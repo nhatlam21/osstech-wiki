@@ -1,0 +1,9 @@
+{
+  "label": "Tự động hóa",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Tài liệu chuyên sâu về tự động hóa: CI/CD, Scripting, Infrastructure as Code, và các công cụ automation"
+  }
+}
+

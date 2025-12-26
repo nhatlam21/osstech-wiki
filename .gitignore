@@ -1,0 +1,13 @@
+# Bỏ qua thư mục thư viện nặng
+node_modules/
+
+# Bỏ qua thư mục build (khi chạy npm run build)
+build/
+.docusaurus/
+
+# Bỏ qua các file hệ thống rác
+.DS_Store
+Thumbs.db
+
+# Bỏ qua file môi trường (chứa mật khẩu)
+.env

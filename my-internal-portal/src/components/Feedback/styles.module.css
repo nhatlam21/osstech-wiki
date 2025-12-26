@@ -1,0 +1,56 @@
+.feedbackContainer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.feedbackCard {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+}
+
+.feedbackButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feedbackButton {
+  flex: 1;
+  min-width: 150px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.feedbackButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.positiveButton {
+  background-color: var(--ifm-color-success);
+  color: white;
+}
+
+.positiveButton:hover {
+  background-color: var(--ifm-color-success-dark);
+}
+
+.negativeButton {
+  background-color: var(--ifm-color-danger);
+  color: white;
+}
+
+.negativeButton:hover {
+  background-color: var(--ifm-color-danger-dark);
+}
+
+@media screen and (max-width: 996px) {
+  .feedbackButtons {
+    flex-direction: column;
+  }
+  
+  .feedbackButton {
+    width: 100%;
+  }
+}
+

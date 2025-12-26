@@ -1,0 +1,9 @@
+{
+  "label": "Quy trình dự án",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Quy trình làm việc, Git workflow, và release process"
+  }
+}
+

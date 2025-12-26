@@ -1,0 +1,9 @@
+{
+  "label": "Bảo mật",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Tài liệu chuyên sâu về bảo mật: Network Security, Application Security, Cryptography, Penetration Testing, và Security Best Practices"
+  }
+}
+

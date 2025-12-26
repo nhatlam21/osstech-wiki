@@ -1,0 +1,9 @@
+{
+  "label": "Linux Administration",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Tài liệu chuyên sâu về Linux: System Administration, Shell Scripting, Network Configuration, Performance Tuning, và Troubleshooting"
+  }
+}
+
