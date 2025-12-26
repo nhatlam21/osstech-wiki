@@ -1,0 +1,20 @@
+name: Auto Deploy to Local Laptop
+
+on:
+  push:
+    branches: ["main"]  # Chỉ chạy khi có code mới vào nhánh main
+
+jobs:
+  deploy:
+    runs-on: self-hosted # QUAN TRỌNG: Lệnh này bảo nó chạy trên máy của bạn
+    steps:
+      - name: Lấy code mới nhất về
+        uses: actions/checkout@v3
+
+      - name: Cài đặt các thư viện mới (nếu có)
+        # Vì máy bạn đã cài Node rồi, ta dùng lệnh cmd để gọi
+        run: npm install
+
+      - name: Khởi động lại Server
+        # Gọi PM2 để reload lại ứng dụng
+        run: pm2 restart osstech-wiki
