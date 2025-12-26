@@ -8,7 +8,7 @@ jobs:
   deploy:
     runs-on: self-hosted
     
-    # QUAN TRỌNG: Dặn Runner tất cả các lệnh bên dưới phải chạy trong thư mục này
+    # 👇 QUAN TRỌNG: Dòng này bắt Runner chui vào đúng thư mục dự án
     defaults:
       run:
         working-directory: ./my-internal-portal
@@ -21,7 +21,6 @@ jobs:
         run: npm install
 
       - name: Khởi động lại Server
-        # Nếu lỡ Server chưa chạy thì chạy mới, nếu chạy rồi thì khởi động lại
-        # Dùng ecosystem.config.js để đảm bảo chạy đúng cấu hình chuẩn
+        # Nếu lỡ Server chưa chạy thì chạy mới, nếu chạy rồi thì reload
         run: |
           pm2 reload osstech-wiki || pm2 start ecosystem.config.js
