@@ -6,13 +6,22 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted  # Chạy trên máy của bạn (con Runner bạn vừa cài)
+    runs-on: self-hosted
+    
+    # QUAN TRỌNG: Dặn Runner tất cả các lệnh bên dưới phải chạy trong thư mục này
+    defaults:
+      run:
+        working-directory: ./my-internal-portal
+
     steps:
       - name: Lấy code mới nhất về
         uses: actions/checkout@v3
 
-      - name: Cài đặt thư viện (nếu cần)
+      - name: Cài đặt thư viện
         run: npm install
 
       - name: Khởi động lại Server
-        run: pm2 restart osstech-wiki
+        # Nếu lỡ Server chưa chạy thì chạy mới, nếu chạy rồi thì khởi động lại
+        # Dùng ecosystem.config.js để đảm bảo chạy đúng cấu hình chuẩn
+        run: |
+          pm2 reload osstech-wiki || pm2 start ecosystem.config.js
